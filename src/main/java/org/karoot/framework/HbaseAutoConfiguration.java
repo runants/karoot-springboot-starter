@@ -1,4 +1,4 @@
-package org.karoot;
+package org.karoot.framework;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -19,7 +19,7 @@ public class HbaseAutoConfiguration {
 
     @Bean
     public Object hbaseConnectPool(){
-        System.out.println("sss");
+        System.out.println("------------>:karoot-springboot-starter start!");
         return new Integer(10);
     }
 }

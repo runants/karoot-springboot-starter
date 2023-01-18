@@ -1,4 +1,4 @@
-package org.karoot;
+package org.karoot.framework;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -10,7 +10,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2023/1/18
  */
 @ConfigurationProperties(
-        prefix = KaRootProperties.PREFIX,
+        // prefix = KaRootProperties.PREFIX,
+        prefix = "spring.karoot",
         ignoreUnknownFields = false
 )
 
@@ -56,5 +57,13 @@ public class KaRootProperties {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
     }
 }

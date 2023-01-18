@@ -1,1 +1,1 @@
-org.springframework.beans.BeanInfoFactory=org.karoot.HbaseAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.karoot.framework.HbaseAutoConfiguration
