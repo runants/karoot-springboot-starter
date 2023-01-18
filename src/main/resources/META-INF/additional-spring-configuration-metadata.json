@@ -1,0 +1,26 @@
+{"properties": [
+  {
+    "name": "spring.karoot.host",
+    "type": "java.lang.String",
+    "description": "地址",
+    "defaultValue": "localhost"
+  },
+  {
+    "name": "spring.karoot.port",
+    "type": "java.lang.String",
+    "description": "端口",
+    "defaultValue": "port"
+  },
+  {
+    "name": "spring.karoot.version",
+    "type": "java.lang.String",
+    "defaultValue": "V1.0",
+    "description": "版本。"
+  },
+  {
+    "name": "spring.karoot.enabled",
+    "type": "java.lang.String",
+    "description": "是否启用",
+    "defaultValue": "false"
+  }
+]}
