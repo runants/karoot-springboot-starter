@@ -10,8 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2023/1/18
  */
 @ConfigurationProperties(
-        // prefix = KaRootProperties.PREFIX,
-        prefix = "spring.karoot",
+        prefix = KaRootProperties.PREFIX,
         ignoreUnknownFields = false
 )
 
