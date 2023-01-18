@@ -1,7 +1,6 @@
 package org.karoot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 /**
  * <p>Description:
@@ -31,7 +30,7 @@ public class KaRootProperties {
      * 版本
      */
     private String version = "V1.0";
-    
+
     private String enabled = "false";
 
 
