@@ -33,7 +33,6 @@ public class KaRootProperties {
 
     private String enabled = "false";
 
-
     public String getHost() {
         return host;
     }

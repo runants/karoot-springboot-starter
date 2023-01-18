@@ -1,1 +1,3 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.karoot.framework.HbaseAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.karoot.framework.HbaseAutoConfiguration,\
+  org.karoot.framework.aop.MyLogAutoConfiguration
