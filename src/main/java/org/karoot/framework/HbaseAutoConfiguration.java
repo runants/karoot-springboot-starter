@@ -2,6 +2,8 @@ package org.karoot.framework;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -18,12 +20,12 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(KaRootProperties.class)
 @Configuration
 public class HbaseAutoConfiguration {
-    protected final Log logger = LogFactory.getLog(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
     @Bean
     public Object hbaseConnectPool(){
-        logger.info("------------>:karoot-springboot-starter start!");
+        logger.info("------------> karoot-springboot-starter start!");
         return new Integer(10);
     }
 }

@@ -1,5 +1,7 @@
 package org.karoot.framework.aop;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -16,11 +18,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableConfigurationProperties({KaLogProperties.class})
 @ConditionalOnProperty(prefix = "karoot.syslog",
-        value = "enabled")
-public class MyLogAutoConfiguration {
+        value = "enabled",havingValue = "true")
+public class KaLogAutoConfiguration {
+    private Logger log = LoggerFactory.getLogger(this.getClass());
+
     @Bean
-    @ConditionalOnMissingBean
+    // @ConditionalOnMissingBean
     public WebLogAspect webLogAspect(){
+        log.info("------> webLogAspect is enabled!");
         return new WebLogAspect();
     }
 }
