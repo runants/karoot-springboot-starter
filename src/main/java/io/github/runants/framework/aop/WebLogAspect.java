@@ -1,14 +1,10 @@
-package org.karoot.framework.aop;
+package io.github.runants.framework.aop;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.karoot.framework.aop.annotations.OperateLog;
+import io.github.runants.framework.aop.annotations.OperateLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
 
 /**
  * <p>Description:

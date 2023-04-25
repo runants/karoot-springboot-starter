@@ -1,8 +1,8 @@
-package org.karoot.framework.aop.enums;
+package io.github.runants.framework.aop.enums;
 
+import io.github.runants.framework.aop.annotations.OperateLog;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.karoot.framework.aop.annotations.OperateLog;
 
 /**
  * 操作日志的操作类型

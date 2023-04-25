@@ -1,4 +1,4 @@
-package org.karoot.framework;
+package io.github.runants.framework;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
