@@ -1,8 +1,8 @@
-package io.github.runants.framework.aop;
+package core.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import io.github.runants.framework.aop.annotations.OperateLog;
+import core.aop.annotations.OperateLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
-package io.github.runants.framework.aop.enums;
+package core.aop.enums;
 
-import io.github.runants.framework.aop.annotations.OperateLog;
+import core.aop.annotations.OperateLog;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

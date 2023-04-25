@@ -1,6 +1,6 @@
-package io.github.runants.framework.aop.annotations;
+package core.aop.annotations;
 
-import io.github.runants.framework.aop.enums.OperateTypeEnum;
+import core.aop.enums.OperateTypeEnum;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

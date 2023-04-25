@@ -1,4 +1,4 @@
-package io.github.runants.framework;
+package core;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
