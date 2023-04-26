@@ -7,20 +7,18 @@
 
     <groupId>io.github.runants</groupId>
     <artifactId>karoot</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.1</version>
     <modules>
         <module>aop-srpingboot-starter</module>
     </modules>
-    <packaging>pom</packaging>
-
     <description>a aop based toolkit.</description>
     <url>https://github.com/runants/karoot-springboot-starter</url>
-    <name>karoot-springboot-starter</name>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
     <dependencyManagement>
 
         <dependencies>
@@ -62,29 +60,31 @@
 
     </dependencyManagement>
 
+
+
+
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
+
     <developers>
         <developer>
-            <name>runants</name>
+            <name>ityuroot</name>
             <email>ityuroot@gmail.com</email>
-            <organization>personal</organization>
-            <roles>
-                <role>owner</role>
-            </roles>
+            <organization>Sonatype</organization>
+            <organizationUrl>https://yuroot.top</organizationUrl>
         </developer>
     </developers>
-
     <scm>
         <url>https://github.com/runants/karoot-springboot-starter</url>
-        <connection>scm:git:https://github.com/runants/karoot-springboot-starter.git</connection>
-        <developerConnection>scm:git:https://github.com/runants/karoot-springboot-starter.git</developerConnection>
+        <connection>scm:git:git://github.com/runants/karoot-springboot-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:runants/karoot-springboot-starter.git</developerConnection>
     </scm>
 
     <build>
@@ -93,11 +93,56 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <!-- jdk1.8要加上，1.7要去掉，否则会报错 -->
+                    <additionalJOptions>
+                        <additionalJOption>-Xdoclint:none</additionalJOption>
+                    </additionalJOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -111,23 +156,5 @@
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-
-    <!--ali maven-->
-    <repositories>
-        <repository>
-            <id>alimaven</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>alimaven</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-
 
 </project>
