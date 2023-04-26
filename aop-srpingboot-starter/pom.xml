@@ -5,12 +5,12 @@
     <parent>
         <artifactId>karoot</artifactId>
         <groupId>io.github.runants</groupId>
-        <version>1.0.1</version>
+        <version>2.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>aop-srpingboot-starter</artifactId>
-    <version>1.0.1</version>
+    <version>${parent.version}</version>
 
 
     <properties>
