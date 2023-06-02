@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aop-srpingboot-starter</artifactId>
+    <artifactId>aop-springboot-starter</artifactId>
     <version>${parent.version}</version>
 
 
@@ -43,6 +43,19 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
     </dependencies>
 
     <licenses>
@@ -70,13 +83,14 @@
 
     <build>
         <plugins>
+            <!-- 指定maven.compiler.plugin 配置版本，解决编译问题 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
                 <configuration>
-                    <encoding>UTF-8</encoding>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
